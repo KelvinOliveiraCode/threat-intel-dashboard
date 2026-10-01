@@ -32,3 +32,6 @@ Desktop.ini
 .DS_Store
 .idea/
 .vscode/
+# Mensagens de commit escritas em arquivo temporario
+tmp_msg.txt
+tmp_*.txt
