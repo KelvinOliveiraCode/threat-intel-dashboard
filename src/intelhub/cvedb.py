@@ -48,6 +48,55 @@ class CVE:
             raise ValueError("affected_version e obrigatorio")
 
 
+#: Grafias que um humano escreve em JSON para dizer "nao". O campo
+#: ``workaround`` chega de base de terceiros e de planilha editada a mao, e
+#: ``"false"`` em vez de ``false`` e o erro mais comum que existe nesse campo.
+FALSOS = ("false", "nao", "no", "n", "0", "f", "off", "0.0", "")
+
+
+def _booleano(valor: Any) -> bool:
+    """Converte o campo ``workaround`` em booleano, recusando lixo.
+
+    Convert the ``workaround`` field to a boolean, rejecting garbage.
+
+    ``bool()`` sozinho e o erro: ``bool("false")`` e ``True``, porque qualquer
+    string nao vazia e verdadeira em Python. Um JSON com ``"workaround":
+    "false"`` - grafia que alguem digita com naturalidade - virava ``True``,
+    o risco caia um ponto e o relatorio passava a recomendar "aplicar
+    workaround publicado" num CVE sem workaround. Numa ferramenta de
+    seguranca, um "esta tudo bem" falso e pior do que um erro barulhento.
+
+    Args:
+        valor: Valor cru do JSON.
+
+    Returns:
+        O booleano correspondente.
+
+    Raises:
+        ValueError: Se o valor nao for booleano nem uma grafia reconhecida.
+            Recusar e melhor do que assumir: quem escreveu ``"talvez"`` nao
+            sabe a resposta, e adivinhar por ele decide a prioridade de um
+            ativo real.
+    """
+    if isinstance(valor, bool):
+        return valor
+
+    if isinstance(valor, (int, float)):
+        if valor in (0, 1):
+            return bool(valor)
+        raise ValueError(f"workaround numerico fora de 0 ou 1: {valor!r}")
+
+    if isinstance(valor, str):
+        texto = valor.strip().lower()
+        if texto in FALSOS:
+            return False
+        if texto in ("true", "sim", "yes", "y", "1", "t", "on", "1.0"):
+            return True
+        raise ValueError(f"workaround nao e booleano: {valor!r}")
+
+    raise ValueError(f"workaround com tipo inesperado: {type(valor).__name__}")
+
+
 def _normalizar(dado: dict[str, Any]) -> CVE:
     return CVE(
         id=str(dado.get("id", "")).strip(),
@@ -57,7 +106,7 @@ def _normalizar(dado: dict[str, Any]) -> CVE:
         affected_version=str(dado.get("affected_version", "")).strip(),
         manufacturer=str(dado.get("manufacturer", "")).strip(),
         model=str(dado.get("model", "")).strip(),
-        workaround=bool(dado.get("workaround", False)),
+        workaround=_booleano(dado.get("workaround", False)),
     )
 
 
