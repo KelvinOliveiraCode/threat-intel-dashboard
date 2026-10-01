@@ -1,0 +1,812 @@
+[
+  {
+    "id": "CVE-2026-1001",
+    "description": "[CVE-2026-1001] Falha critica de execucao remota sem autenticacao. Vetor: AV:N AC:L PR:N.",
+    "cvss": 9.8,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_version": "7.0.0 - 7.4.1",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 60F",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-1002",
+    "description": "[CVE-2026-1002] Falha de divulgacao de informacao, exige mais condicoes. Vetor: AV:N AC:H PR:N.",
+    "cvss": 8.1,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "7.4.0 - 7.4.1",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 60F",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-1003",
+    "description": "[CVE-2026-1003] Falha de disponibilidade ou integridade com privilegios. Vetor: AV:N AC:L PR:L.",
+    "cvss": 7.5,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "affected_version": "7.2.0 - 7.4.1",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 60F",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-1004",
+    "description": "[CVE-2026-1004] Falha grave de execucao remota, exige configuracao especifica. Vetor: AV:N AC:L PR:N.",
+    "cvss": 9.1,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+    "affected_version": "7.4.1",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 60F",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-1005",
+    "description": "[CVE-2026-1005] Falha de autenticacao fraca em servico de rede. Vetor: AV:L AC:L PR:L.",
+    "cvss": 6.5,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "6.4.0 - 7.4.1",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 60F",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-1006",
+    "description": "[CVE-2026-1006] Falha que exige interacao do usuario. Vetor: AV:N AC:L PR:N.",
+    "cvss": 5.3,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+    "affected_version": "7.4.0 - 7.4.2",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 60F",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-2001",
+    "description": "[CVE-2026-2001] Falha de divulgacao de informacao com impacto alto. Vetor: AV:N AC:L PR:N.",
+    "cvss": 8.8,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "15.0.0 - 15.2.4",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 2960",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-2002",
+    "description": "[CVE-2026-2002] Negacao de servico em rede adjacente. Vetor: AV:A AC:L PR:N.",
+    "cvss": 7.8,
+    "vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "affected_version": "15.2.0 - 15.2.4",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 2960",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-2003",
+    "description": "[CVE-2026-2003] Falha grave de corrupcao de memoria alcanavel pela rede. Vetor: AV:N AC:L PR:L.",
+    "cvss": 9.0,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+    "affected_version": "15.2.4",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 2960",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-2004",
+    "description": "[CVE-2026-2004] Falha de seguranca registrada em laboratorio. Vetor: AV:N AC:H PR:N.",
+    "cvss": 6.4,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:P/I:N/A:N",
+    "affected_version": "15.0.0 - 15.1.9",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 2960",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-2005",
+    "description": "[CVE-2026-2005] Falha de divulgacao local com privilegios. Vetor: AV:L AC:L PR:L.",
+    "cvss": 4.3,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "15.1.0 - 15.2.4",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 2960",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-2006",
+    "description": "[CVE-2026-2006] Negacao de servico local com consequencia limitada. Vetor: AV:N AC:L PR:N.",
+    "cvss": 5.9,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "15.2.0 - 15.2.3",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 2960",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-3001",
+    "description": "[CVE-2026-3001] Falha de escalonamento de privilegio com alteracao de escopo. Vetor: AV:N AC:L PR:N.",
+    "cvss": 9.3,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+    "affected_version": "12.3.0 - 12.3.1",
+    "manufacturer": "Juniper",
+    "model": "EX3400",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-3002",
+    "description": "[CVE-2026-3002] Falha de confidencialidade com privilegios necessarios. Vetor: AV:N AC:L PR:N.",
+    "cvss": 7.7,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "12.0.0 - 12.3.1",
+    "manufacturer": "Juniper",
+    "model": "EX3400",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-3003",
+    "description": "[CVE-2026-3003] Falha de divulgacao de informacao em canal seguro. Vetor: AV:N AC:L PR:L.",
+    "cvss": 8.2,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "12.3.1",
+    "manufacturer": "Juniper",
+    "model": "EX3400",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-3004",
+    "description": "[CVE-2026-3004] Falha de autorizacao insuficiente. Vetor: AV:A AC:L PR:L.",
+    "cvss": 6.1,
+    "vector": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "11.4.0 - 12.3.1",
+    "manufacturer": "Juniper",
+    "model": "EX3400",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-3005",
+    "description": "[CVE-2026-3005] Falha local com consequencia moderada. Vetor: AV:N AC:H PR:L.",
+    "cvss": 5.0,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:P/I:N/A:N",
+    "affected_version": "12.3.0 - 12.3.2",
+    "manufacturer": "Juniper",
+    "model": "EX3400",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-3006",
+    "description": "[CVE-2026-3006] Falha de divulgacao em rede local. Vetor: AV:L AC:L PR:N.",
+    "cvss": 4.7,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "12.3.1",
+    "manufacturer": "Juniper",
+    "model": "EX3400",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-4001",
+    "description": "[CVE-2026-4001] Falha de divulgacao de informacao com impacto alto. Vetor: AV:N AC:L PR:N.",
+    "cvss": 8.8,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "8.6.0 - 8.7.1",
+    "manufacturer": "Aruba",
+    "model": "AP-315",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-4002",
+    "description": "[CVE-2026-4002] Negacao de servico ou divulgacao em rede local. Vetor: AV:A AC:L PR:N.",
+    "cvss": 7.4,
+    "vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "affected_version": "8.7.1",
+    "manufacturer": "Aruba",
+    "model": "AP-315",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-4003",
+    "description": "[CVE-2026-4003] Falha de divulgacao com rede adjacente. Vetor: AV:N AC:L PR:L.",
+    "cvss": 6.2,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "8.0.0 - 8.7.1",
+    "manufacturer": "Aruba",
+    "model": "AP-315",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-4004",
+    "description": "[CVE-2026-4004] Falha que exige interacao do usuario. Vetor: AV:N AC:H PR:N.",
+    "cvss": 5.3,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "affected_version": "8.7.0 - 8.7.1",
+    "manufacturer": "Aruba",
+    "model": "AP-315",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-4005",
+    "description": "[CVE-2026-4005] Falha de integridade com rede adjacente. Vetor: AV:L AC:L PR:L.",
+    "cvss": 4.0,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "8.7.1",
+    "manufacturer": "Aruba",
+    "model": "AP-315",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-5001",
+    "description": "[CVE-2026-5001] Falha critica de execucao remota sem autenticacao. Vetor: AV:N AC:L PR:N.",
+    "cvss": 9.8,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "affected_version": "9.8.0 - 9.8.4",
+    "manufacturer": "NetApp",
+    "model": "FAS2700",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-5002",
+    "description": "[CVE-2026-5002] Falha de divulgacao de informacao, exige mais condicoes. Vetor: AV:N AC:L PR:N.",
+    "cvss": 8.1,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "9.6.0 - 9.8.0",
+    "manufacturer": "NetApp",
+    "model": "FAS2700",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-5003",
+    "description": "[CVE-2026-5003] Falha critica de execucao remota com privilegios baixos. Vetor: AV:N AC:L PR:L.",
+    "cvss": 9.5,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+    "affected_version": "9.8.0",
+    "manufacturer": "NetApp",
+    "model": "FAS2700",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-5004",
+    "description": "[CVE-2026-5004] Falha de disponibilidade ou integridade com privilegios. Vetor: AV:N AC:H PR:N.",
+    "cvss": 7.5,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "affected_version": "9.4.0 - 9.8.0",
+    "manufacturer": "NetApp",
+    "model": "FAS2700",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-5005",
+    "description": "[CVE-2026-5005] Falha de seguranca registrada em laboratorio. Vetor: AV:N AC:L PR:L.",
+    "cvss": 6.8,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "9.7.0 - 9.8.0",
+    "manufacturer": "NetApp",
+    "model": "FAS2700",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-5006",
+    "description": "[CVE-2026-5006] Negacao de servico local com consequencia limitada. Vetor: AV:A AC:L PR:N.",
+    "cvss": 5.9,
+    "vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "9.8.0 - 9.8.1",
+    "manufacturer": "NetApp",
+    "model": "FAS2700",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-5007",
+    "description": "[CVE-2026-5007] Falha local com integridade parcial. Vetor: AV:L AC:L PR:L.",
+    "cvss": 4.9,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "9.8.0",
+    "manufacturer": "NetApp",
+    "model": "FAS2700",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-6001",
+    "description": "[CVE-2026-6001] Falha critica de execucao remota sem autenticacao. Vetor: AV:N AC:L PR:N.",
+    "cvss": 9.8,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_version": "7.0.0 - 7.4.1",
+    "manufacturer": "MikroTik",
+    "model": "CCR2004",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-6002",
+    "description": "[CVE-2026-6002] Falha de integridade com privilegios baixos. Vetor: AV:N AC:L PR:N.",
+    "cvss": 8.6,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "7.4.0 - 7.4.1",
+    "manufacturer": "MikroTik",
+    "model": "CCR2004",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-6003",
+    "description": "[CVE-2026-6003] Falha de disponibilidade ou integridade com privilegios. Vetor: AV:N AC:L PR:L.",
+    "cvss": 7.5,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+    "affected_version": "7.4.1",
+    "manufacturer": "MikroTik",
+    "model": "CCR2004",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-6004",
+    "description": "[CVE-2026-6004] Falha de autenticacao fraca em servico de rede. Vetor: AV:N AC:H PR:N.",
+    "cvss": 6.5,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "6.49.0 - 7.4.1",
+    "manufacturer": "MikroTik",
+    "model": "CCR2004",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-6005",
+    "description": "[CVE-2026-6005] Falha de divulgacao em rede local. Vetor: AV:L AC:L PR:N.",
+    "cvss": 4.7,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "7.2.0 - 7.4.1",
+    "manufacturer": "MikroTik",
+    "model": "CCR2004",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-7001",
+    "description": "[CVE-2026-7001] Falha de divulgacao de informacao em canal seguro. Vetor: AV:N AC:L PR:N.",
+    "cvss": 8.2,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "2.0.0 - 2.3.1",
+    "manufacturer": "Dell",
+    "model": "PowerEdge R750",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-7002",
+    "description": "[CVE-2026-7002] Falha de integridade com privilegios de usuario. Vetor: AV:N AC:L PR:L.",
+    "cvss": 7.2,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "2.3.0 - 2.3.1",
+    "manufacturer": "Dell",
+    "model": "PowerEdge R750",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-7003",
+    "description": "[CVE-2026-7003] Falha de seguranca registrada em laboratorio. Vetor: AV:L AC:L PR:N.",
+    "cvss": 6.0,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:P/I:P/A:N",
+    "affected_version": "2.3.1",
+    "manufacturer": "Dell",
+    "model": "PowerEdge R750",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-7004",
+    "description": "[CVE-2026-7004] Falha local com integridade parcial. Vetor: AV:N AC:H PR:L.",
+    "cvss": 4.9,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "1.5.0 - 2.3.1",
+    "manufacturer": "Dell",
+    "model": "PowerEdge R750",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-7005",
+    "description": "[CVE-2026-7005] Falha local com negacao de servico limitada. Vetor: AV:L AC:H PR:L.",
+    "cvss": 3.9,
+    "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+    "affected_version": "2.3.1",
+    "manufacturer": "Dell",
+    "model": "PowerEdge R750",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-8001",
+    "description": "[CVE-2026-8001] Falha de seguranca registrada em laboratorio. Vetor: AV:N AC:L PR:N.",
+    "cvss": 10.0,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "affected_version": "10.0.0 - 10.1.0",
+    "manufacturer": "Palo Alto",
+    "model": "PA-3220",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-8002",
+    "description": "[CVE-2026-8002] Falha grave de execucao remota, exige configuracao especifica. Vetor: AV:N AC:L PR:N.",
+    "cvss": 9.1,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_version": "10.1.0",
+    "manufacturer": "Palo Alto",
+    "model": "PA-3220",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-8003",
+    "description": "[CVE-2026-8003] Falha de divulgacao de informacao, exige mais condicoes. Vetor: AV:N AC:L PR:L.",
+    "cvss": 8.1,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "9.1.0 - 10.1.0",
+    "manufacturer": "Palo Alto",
+    "model": "PA-3220",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-8004",
+    "description": "[CVE-2026-8004] Falha de autenticacao fraca em servico de rede. Vetor: AV:N AC:H PR:N.",
+    "cvss": 6.5,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "10.0.0 - 10.1.1",
+    "manufacturer": "Palo Alto",
+    "model": "PA-3220",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-8005",
+    "description": "[CVE-2026-8005] Falha de divulgacao em rede adjacente com privilegios. Vetor: AV:A AC:L PR:N.",
+    "cvss": 5.4,
+    "vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "10.1.0",
+    "manufacturer": "Palo Alto",
+    "model": "PA-3220",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-8006",
+    "description": "[CVE-2026-8006] Falha de divulgacao local com privilegios. Vetor: AV:L AC:L PR:L.",
+    "cvss": 4.3,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "10.1.0 - 10.1.0",
+    "manufacturer": "Palo Alto",
+    "model": "PA-3220",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-2007",
+    "description": "[CVE-2026-2007] Falha de integridade com rede de alta complexidade. Vetor: AV:N AC:H PR:N.",
+    "cvss": 5.8,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "15.0.0 - 15.2.4",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 2960",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-2008",
+    "description": "[CVE-2026-2008] Falha de integridade com rede adjacente. Vetor: AV:L AC:L PR:N.",
+    "cvss": 4.0,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "affected_version": "15.2.0 - 15.2.4",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 2960",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-2009",
+    "description": "[CVE-2026-2009] Falha local de consequencia baixa. Vetor: AV:N AC:H PR:H.",
+    "cvss": 3.1,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:N/I:N/A:N",
+    "affected_version": "15.2.4",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 2960",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-3007",
+    "description": "[CVE-2026-3007] Falha de divulgacao em rede adjacente com privilegios. Vetor: AV:N AC:L PR:L.",
+    "cvss": 5.4,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "12.0.0 - 12.3.1",
+    "manufacturer": "Juniper",
+    "model": "EX3400",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-3008",
+    "description": "[CVE-2026-3008] Falha de integridade em rede adjacente. Vetor: AV:A AC:H PR:N.",
+    "cvss": 4.4,
+    "vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "12.3.0 - 12.3.1",
+    "manufacturer": "Juniper",
+    "model": "EX3400",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-3009",
+    "description": "[CVE-2026-3009] Falha de integridade local em rede adjacente. Vetor: AV:L AC:L PR:N.",
+    "cvss": 3.5,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "affected_version": "12.1.0 - 12.3.1",
+    "manufacturer": "Juniper",
+    "model": "EX3400",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-1007",
+    "description": "[CVE-2026-1007] Falha de divulgacao local com privilegios. Vetor: AV:N AC:H PR:L.",
+    "cvss": 4.3,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "7.4.0 - 7.4.1",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 60F",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-1008",
+    "description": "[CVE-2026-1008] Falha de integridade local com privilegios. Vetor: AV:L AC:L PR:L.",
+    "cvss": 3.7,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+    "affected_version": "7.3.0 - 7.4.1",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 60F",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-1009",
+    "description": "[CVE-2026-1009] Falha local com consequencia moderada. Vetor: AV:N AC:L PR:N.",
+    "cvss": 5.0,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+    "affected_version": "7.4.1",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 60F",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-5008",
+    "description": "[CVE-2026-5008] Falha de divulgacao local com privilegios. Vetor: AV:N AC:H PR:L.",
+    "cvss": 4.3,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "9.7.0 - 9.8.0",
+    "manufacturer": "NetApp",
+    "model": "FAS2700",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-5009",
+    "description": "[CVE-2026-5009] Falha de integridade local. Vetor: AV:L AC:L PR:N.",
+    "cvss": 3.3,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "affected_version": "9.8.0 - 9.8.2",
+    "manufacturer": "NetApp",
+    "model": "FAS2700",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-8007",
+    "description": "[CVE-2026-8007] Falha local com negacao de servico limitada. Vetor: AV:L AC:H PR:L.",
+    "cvss": 3.9,
+    "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "10.0.0 - 10.1.0",
+    "manufacturer": "Palo Alto",
+    "model": "PA-3220",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-8008",
+    "description": "[CVE-2026-8008] Falha de integridade em rede adjacente. Vetor: AV:N AC:L PR:L.",
+    "cvss": 4.4,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N",
+    "affected_version": "10.1.0",
+    "manufacturer": "Palo Alto",
+    "model": "PA-3220",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-6006",
+    "description": "[CVE-2026-6006] Falha local de consequencia baixa. Vetor: AV:N AC:H PR:H.",
+    "cvss": 3.1,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "7.4.0 - 7.4.1",
+    "manufacturer": "MikroTik",
+    "model": "CCR2004",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-6007",
+    "description": "[CVE-2026-6007] Falha de integridade em rede adjacente. Vetor: AV:A AC:L PR:L.",
+    "cvss": 4.4,
+    "vector": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "7.1.0 - 7.4.1",
+    "manufacturer": "MikroTik",
+    "model": "CCR2004",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-4006",
+    "description": "[CVE-2026-4006] Falha de integridade local. Vetor: AV:L AC:L PR:N.",
+    "cvss": 3.3,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+    "affected_version": "8.6.0 - 8.7.1",
+    "manufacturer": "Aruba",
+    "model": "AP-315",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-4007",
+    "description": "[CVE-2026-4007] Falha de integridade com rede adjacente. Vetor: AV:N AC:H PR:L.",
+    "cvss": 4.0,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "affected_version": "8.5.0 - 8.7.1",
+    "manufacturer": "Aruba",
+    "model": "AP-315",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-7006",
+    "description": "[CVE-2026-7006] Falha local de consequencia baixa. Vetor: AV:L AC:L PR:L.",
+    "cvss": 3.1,
+    "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+    "affected_version": "2.2.0 - 2.3.1",
+    "manufacturer": "Dell",
+    "model": "PowerEdge R750",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-7007",
+    "description": "[CVE-2026-7007] Falha de integridade com rede adjacente. Vetor: AV:N AC:H PR:N.",
+    "cvss": 4.0,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+    "affected_version": "2.0.0 - 2.3.1",
+    "manufacturer": "Dell",
+    "model": "PowerEdge R750",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9001",
+    "description": "[CVE-2026-9001] Negacao de servico ou divulgacao em rede local. Vetor: AV:N AC:L PR:N.",
+    "cvss": 7.4,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "16.10.0 - 16.10.9",
+    "manufacturer": "HP",
+    "model": "Aruba 2930M",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9002",
+    "description": "[CVE-2026-9002] Falha de autorizacao insuficiente. Vetor: AV:N AC:L PR:L.",
+    "cvss": 6.1,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "16.0.0 - 16.0.1",
+    "manufacturer": "HP",
+    "model": "Aruba 2930M",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9003",
+    "description": "[CVE-2026-9003] Falha de divulgacao de informacao, exige mais condicoes. Vetor: AV:N AC:L PR:N.",
+    "cvss": 8.1,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "16.10.0 - 16.10.5",
+    "manufacturer": "HP",
+    "model": "Aruba 2930M",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-9101",
+    "description": "[CVE-2026-9101] Falha de disponibilidade ou integridade com privilegios. Vetor: AV:N AC:L PR:N.",
+    "cvss": 7.5,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "2.0.0 - 2.0.9",
+    "manufacturer": "Ubiquiti",
+    "model": "EdgeRouter ER-12",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9102",
+    "description": "[CVE-2026-9102] Falha de divulgacao de informacao, exige mais condicoes. Vetor: AV:N AC:L PR:N.",
+    "cvss": 8.1,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "2.0.9",
+    "manufacturer": "Ubiquiti",
+    "model": "EdgeRouter ER-12",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-9103",
+    "description": "[CVE-2026-9103] Falha de autenticacao fraca em servico de rede. Vetor: AV:N AC:L PR:L.",
+    "cvss": 6.5,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "2.1.0 - 2.1.4",
+    "manufacturer": "Ubiquiti",
+    "model": "EdgeRouter ER-12",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9201",
+    "description": "[CVE-2026-9201] Negacao de servico em rede adjacente. Vetor: AV:N AC:L PR:N.",
+    "cvss": 7.8,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "1.7.0 - 1.7.4",
+    "manufacturer": "Lenovo",
+    "model": "ThinkSystem SR650",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9202",
+    "description": "[CVE-2026-9202] Falha de divulgacao de informacao com impacto alto. Vetor: AV:N AC:L PR:L.",
+    "cvss": 8.8,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "1.7.4",
+    "manufacturer": "Lenovo",
+    "model": "ThinkSystem SR650",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-9203",
+    "description": "[CVE-2026-9203] Falha de divulgacao com rede adjacente. Vetor: AV:N AC:H PR:N.",
+    "cvss": 6.2,
+    "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "1.6.0 - 1.7.4",
+    "manufacturer": "Lenovo",
+    "model": "ThinkSystem SR650",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9301",
+    "description": "[CVE-2026-9301] Falha grave de execucao remota, exige configuracao especifica. Vetor: AV:N AC:L PR:N.",
+    "cvss": 9.1,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+    "affected_version": "12.4.0 - 12.4.2",
+    "manufacturer": "WatchGuard",
+    "model": "Firebox T35",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-9302",
+    "description": "[CVE-2026-9302] Falha de confidencialidade com privilegios necessarios. Vetor: AV:N AC:L PR:N.",
+    "cvss": 7.7,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_version": "12.0.0 - 12.4.0",
+    "manufacturer": "WatchGuard",
+    "model": "Firebox T35",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9303",
+    "description": "[CVE-2026-9303] Falha de autenticacao contornavel. Vetor: AV:N AC:L PR:L.",
+    "cvss": 8.4,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "12.4.0",
+    "manufacturer": "WatchGuard",
+    "model": "Firebox T35",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9304",
+    "description": "[CVE-2026-9304] Negacao de servico local com consequencia limitada. Vetor: AV:N AC:L PR:L.",
+    "cvss": 5.9,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+    "affected_version": "12.2.0 - 12.4.0",
+    "manufacturer": "WatchGuard",
+    "model": "Firebox T35",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9401",
+    "description": "[CVE-2026-9401] Falha critica de execucao remota sem autenticacao. Vetor: AV:N AC:L PR:N.",
+    "cvss": 9.8,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_version": "7.0.0 - 7.4.1",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 200F",
+    "workaround": false
+  },
+  {
+    "id": "CVE-2026-9402",
+    "description": "[CVE-2026-9402] Falha de integridade com privilegios baixos. Vetor: AV:N AC:L PR:N.",
+    "cvss": 8.6,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "affected_version": "15.0.0 - 15.2.4",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 9300",
+    "workaround": true
+  },
+  {
+    "id": "CVE-2026-9403",
+    "description": "[CVE-2026-9403] Falha grave de corrupcao de memoria alcanavel pela rede. Vetor: AV:N AC:L PR:N.",
+    "cvss": 9.0,
+    "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_version": "12.3.0 - 12.3.1",
+    "manufacturer": "Juniper",
+    "model": "EX9200",
+    "workaround": false
+  }
+]

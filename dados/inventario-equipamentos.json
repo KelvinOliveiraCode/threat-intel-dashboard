@@ -1,0 +1,93 @@
+[
+  {
+    "fabricante": "Fortinet",
+    "modelo": "FortiGate 60F",
+    "firmware": "7.4.1",
+    "criticidade": "alta",
+    "exposicao_red": "publico"
+  },
+  {
+    "fabricante": "Cisco",
+    "modelo": "Catalyst 2960",
+    "firmware": "15.2.4",
+    "criticidade": "alta",
+    "exposicao_red": "interno"
+  },
+  {
+    "fabricante": "Juniper",
+    "modelo": "EX3400",
+    "firmware": "12.3.1",
+    "criticidade": "critica",
+    "exposicao_red": "interno"
+  },
+  {
+    "fabricante": "Aruba",
+    "modelo": "AP-315",
+    "firmware": "8.7.1",
+    "criticidade": "media",
+    "exposicao_red": "publico"
+  },
+  {
+    "fabricante": "NetApp",
+    "modelo": "FAS2700",
+    "firmware": "9.8.0",
+    "criticidade": "critica",
+    "exposicao_red": "interno"
+  },
+  {
+    "fabricante": "MikroTik",
+    "modelo": "CCR2004",
+    "firmware": "7.4.1",
+    "criticidade": "media",
+    "exposicao_red": "publico"
+  },
+  {
+    "fabricante": "Dell",
+    "modelo": "PowerEdge R750",
+    "firmware": "2.3.1",
+    "criticidade": "critica",
+    "exposicao_red": "interno"
+  },
+  {
+    "fabricante": "HP",
+    "modelo": "Aruba 2930M",
+    "firmware": "16.0.1",
+    "criticidade": "media",
+    "exposicao_red": "interno"
+  },
+  {
+    "fabricante": "Palo Alto",
+    "modelo": "PA-3220",
+    "firmware": "10.1.0",
+    "criticidade": "alta",
+    "exposicao_red": "publico"
+  },
+  {
+    "fabricante": "Ubiquiti",
+    "modelo": "EdgeRouter ER-12",
+    "firmware": "2.0.9",
+    "criticidade": "baixa",
+    "exposicao_red": "interno"
+  },
+  {
+    "fabricante": "Lenovo",
+    "modelo": "ThinkSystem SR650",
+    "firmware": "1.7.4",
+    "criticidade": "media",
+    "exposicao_red": "interno"
+  },
+  {
+    "fabricante": "WatchGuard",
+    "modelo": "Firebox T35",
+    "firmware": "12.4.0",
+    "criticidade": "alta",
+    "exposicao_red": "publico"
+  },
+  {
+    "fabricante": "Fortinet",
+    "modelo": "FortiGate 60F",
+    "firmware": "7.4.3",
+    "criticidade": "alta",
+    "exposicao_red": "publico"
+  }
+]

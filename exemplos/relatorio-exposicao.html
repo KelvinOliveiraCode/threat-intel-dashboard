@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatorio de Exposicao - Threat Intel</title>
+<style>
+:root {
+  color-scheme: light;
+  --tinta: #111111;
+  --papel: #ffffff;
+  --cinza: #6b6b6b;
+  --linha: #e2e2e2;
+  --vermelho: #c62828;
+  --azul: #1565c0;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  padding: 48px 24px;
+  background: var(--papel);
+  color: var(--tinta);
+}
+main { max-width: 1120px; margin: 0 auto; }
+h1 {
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  margin: 0 0 4px;
+}
+.subtitle {
+  color: var(--cinza);
+  font-size: 13px;
+  margin: 0 0 36px;
+}
+.summary {
+  border-top: 1px solid var(--linha);
+  border-bottom: 1px solid var(--linha);
+  padding: 20px 0;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 40px;
+  font-size: 13px;
+}
+.summary strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+}
+.summary span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  color: var(--cinza);
+}
+table { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; }
+th, td {
+  border-bottom: 1px solid var(--linha);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 13px;
+}
+th {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cinza);
+  font-weight: 400;
+  border-bottom: 1px solid var(--tinta);
+}
+section.asset { margin-bottom: 48px; }
+section.asset h2 {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+/* A severidade marca a linha pela borda esquerda, nao por fundo colorido.
+   Um relatorio de 73 linhas precisa que a escala se leia sem faixas de cor
+   saturada competindo com o texto. */
+tr.critico td:first-child { border-left: 2px solid var(--vermelho); }
+tr.alto td:first-child { border-left: 2px solid var(--azul); }
+tr.medio td:first-child { border-left: 2px solid var(--cinza); }
+tr.baixo td:first-child { border-left: 2px solid var(--linha); }
+td:nth-child(7) { font-family: Consolas, 'Courier New', monospace; }
+td:nth-child(8) { color: var(--cinza); font-size: 12px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Relatorio de Exposicao de Ativos</h1>
+<p class="subtitle">Cruzamento de inventario com base local de CVEs ficticias. Gerado em 2026-01-15 09:00.</p>
+<div class="summary"><div><span>Itens avaliados</span><strong>73</strong></div><div><span>Criticos ou altos</span><strong>56</strong></div><div><span>Maior risco</span><strong>10.00</strong></div><div><span>CVEs distintas</span><strong>73</strong></div></div>
+<section class="asset"><h2>Palo Alto PA-3220</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-8001</td><td>Palo Alto</td><td>PA-3220</td><td>10.1.0</td><td>alta</td><td>publico</td><td>10.00</td><td>CVSS 10.0; exposicao 1.1x; criticidade +0.3</td><td>Atualizar firmware do Palo Alto PA-3220 para versao fora do alcance 10.0.0 - 10.1.0.</td></tr>
+<tr class="critico"><td>CVE-2026-8002</td><td>Palo Alto</td><td>PA-3220</td><td>10.1.0</td><td>alta</td><td>publico</td><td>10.00</td><td>CVSS 9.1; exposicao 1.1x; criticidade +0.3</td><td>Atualizar firmware do Palo Alto PA-3220 para versao fora do alcance 10.1.0.</td></tr>
+<tr class="critico"><td>CVE-2026-8003</td><td>Palo Alto</td><td>PA-3220</td><td>10.1.0</td><td>alta</td><td>publico</td><td>8.21</td><td>CVSS 8.1; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Palo Alto PA-3220.</td></tr>
+<tr class="alto"><td>CVE-2026-8004</td><td>Palo Alto</td><td>PA-3220</td><td>10.1.0</td><td>alta</td><td>publico</td><td>6.45</td><td>CVSS 6.5; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Palo Alto PA-3220.</td></tr>
+<tr class="alto"><td>CVE-2026-8005</td><td>Palo Alto</td><td>PA-3220</td><td>10.1.0</td><td>alta</td><td>publico</td><td>5.24</td><td>CVSS 5.4; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Palo Alto PA-3220.</td></tr>
+<tr class="alto"><td>CVE-2026-8008</td><td>Palo Alto</td><td>PA-3220</td><td>10.1.0</td><td>alta</td><td>publico</td><td>4.14</td><td>CVSS 4.4; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Palo Alto PA-3220.</td></tr>
+<tr class="alto"><td>CVE-2026-8006</td><td>Palo Alto</td><td>PA-3220</td><td>10.1.0</td><td>alta</td><td>publico</td><td>4.03</td><td>CVSS 4.3; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Palo Alto PA-3220.</td></tr>
+<tr class="medio"><td>CVE-2026-8007</td><td>Palo Alto</td><td>PA-3220</td><td>10.1.0</td><td>alta</td><td>publico</td><td>3.59</td><td>CVSS 3.9; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Palo Alto PA-3220.</td></tr></tbody></table></section>
+<section class="asset"><h2>MikroTik CCR2004</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-6001</td><td>MikroTik</td><td>CCR2004</td><td>7.4.1</td><td>media</td><td>publico</td><td>10.00</td><td>CVSS 9.8; exposicao 1.1x; criticidade +0.1</td><td>Atualizar firmware do MikroTik CCR2004 para versao fora do alcance 7.0.0 - 7.4.1.</td></tr>
+<tr class="critico"><td>CVE-2026-6002</td><td>MikroTik</td><td>CCR2004</td><td>7.4.1</td><td>media</td><td>publico</td><td>8.56</td><td>CVSS 8.6; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do MikroTik CCR2004.</td></tr>
+<tr class="critico"><td>CVE-2026-6003</td><td>MikroTik</td><td>CCR2004</td><td>7.4.1</td><td>media</td><td>publico</td><td>7.35</td><td>CVSS 7.5; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do MikroTik CCR2004.</td></tr>
+<tr class="critico"><td>CVE-2026-6004</td><td>MikroTik</td><td>CCR2004</td><td>7.4.1</td><td>media</td><td>publico</td><td>7.25</td><td>CVSS 6.5; exposicao 1.1x; criticidade +0.1</td><td>Atualizar firmware do MikroTik CCR2004 para versao fora do alcance 6.49.0 - 7.4.1.</td></tr>
+<tr class="alto"><td>CVE-2026-6005</td><td>MikroTik</td><td>CCR2004</td><td>7.4.1</td><td>media</td><td>publico</td><td>4.27</td><td>CVSS 4.7; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do MikroTik CCR2004.</td></tr>
+<tr class="medio"><td>CVE-2026-6007</td><td>MikroTik</td><td>CCR2004</td><td>7.4.1</td><td>media</td><td>publico</td><td>3.94</td><td>CVSS 4.4; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do MikroTik CCR2004.</td></tr>
+<tr class="medio"><td>CVE-2026-6006</td><td>MikroTik</td><td>CCR2004</td><td>7.4.1</td><td>media</td><td>publico</td><td>2.51</td><td>CVSS 3.1; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do MikroTik CCR2004.</td></tr></tbody></table></section>
+<section class="asset"><h2>NetApp FAS2700</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-5001</td><td>NetApp</td><td>FAS2700</td><td>9.8.0</td><td>critica</td><td>interno</td><td>10.00</td><td>CVSS 9.8; criticidade +0.5</td><td>Atualizar firmware do NetApp FAS2700 para versao fora do alcance 9.8.0 - 9.8.4.</td></tr>
+<tr class="critico"><td>CVE-2026-5003</td><td>NetApp</td><td>FAS2700</td><td>9.8.0</td><td>critica</td><td>interno</td><td>10.00</td><td>CVSS 9.5; criticidade +0.5</td><td>Atualizar firmware do NetApp FAS2700 para versao fora do alcance 9.8.0.</td></tr>
+<tr class="critico"><td>CVE-2026-5002</td><td>NetApp</td><td>FAS2700</td><td>9.8.0</td><td>critica</td><td>interno</td><td>7.60</td><td>CVSS 8.1; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do NetApp FAS2700.</td></tr>
+<tr class="critico"><td>CVE-2026-5004</td><td>NetApp</td><td>FAS2700</td><td>9.8.0</td><td>critica</td><td>interno</td><td>7.00</td><td>CVSS 7.5; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do NetApp FAS2700.</td></tr>
+<tr class="alto"><td>CVE-2026-5005</td><td>NetApp</td><td>FAS2700</td><td>9.8.0</td><td>critica</td><td>interno</td><td>6.30</td><td>CVSS 6.8; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do NetApp FAS2700.</td></tr>
+<tr class="alto"><td>CVE-2026-5006</td><td>NetApp</td><td>FAS2700</td><td>9.8.0</td><td>critica</td><td>interno</td><td>5.40</td><td>CVSS 5.9; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do NetApp FAS2700.</td></tr>
+<tr class="alto"><td>CVE-2026-5007</td><td>NetApp</td><td>FAS2700</td><td>9.8.0</td><td>critica</td><td>interno</td><td>4.40</td><td>CVSS 4.9; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do NetApp FAS2700.</td></tr>
+<tr class="medio"><td>CVE-2026-5008</td><td>NetApp</td><td>FAS2700</td><td>9.8.0</td><td>critica</td><td>interno</td><td>3.80</td><td>CVSS 4.3; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do NetApp FAS2700.</td></tr>
+<tr class="medio"><td>CVE-2026-5009</td><td>NetApp</td><td>FAS2700</td><td>9.8.0</td><td>critica</td><td>interno</td><td>2.80</td><td>CVSS 3.3; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do NetApp FAS2700.</td></tr></tbody></table></section>
+<section class="asset"><h2>Fortinet FortiGate 60F</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-1001</td><td>Fortinet</td><td>FortiGate 60F</td><td>7.4.1</td><td>alta</td><td>publico</td><td>10.00</td><td>CVSS 9.8; exposicao 1.1x; criticidade +0.3</td><td>Atualizar firmware do Fortinet FortiGate 60F para versao fora do alcance 7.0.0 - 7.4.1.</td></tr>
+<tr class="critico"><td>CVE-2026-1004</td><td>Fortinet</td><td>FortiGate 60F</td><td>7.4.1</td><td>alta</td><td>publico</td><td>10.00</td><td>CVSS 9.1; exposicao 1.1x; criticidade +0.3</td><td>Atualizar firmware do Fortinet FortiGate 60F para versao fora do alcance 7.4.1.</td></tr>
+<tr class="critico"><td>CVE-2026-1002</td><td>Fortinet</td><td>FortiGate 60F</td><td>7.4.1</td><td>alta</td><td>publico</td><td>8.21</td><td>CVSS 8.1; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Fortinet FortiGate 60F.</td></tr>
+<tr class="critico"><td>CVE-2026-1003</td><td>Fortinet</td><td>FortiGate 60F</td><td>7.4.1</td><td>alta</td><td>publico</td><td>7.55</td><td>CVSS 7.5; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Fortinet FortiGate 60F.</td></tr>
+<tr class="alto"><td>CVE-2026-1005</td><td>Fortinet</td><td>FortiGate 60F</td><td>7.4.1</td><td>alta</td><td>publico</td><td>6.45</td><td>CVSS 6.5; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Fortinet FortiGate 60F.</td></tr>
+<tr class="alto"><td>CVE-2026-1006</td><td>Fortinet</td><td>FortiGate 60F</td><td>7.4.1</td><td>alta</td><td>publico</td><td>5.13</td><td>CVSS 5.3; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Fortinet FortiGate 60F.</td></tr>
+<tr class="alto"><td>CVE-2026-1009</td><td>Fortinet</td><td>FortiGate 60F</td><td>7.4.1</td><td>alta</td><td>publico</td><td>4.80</td><td>CVSS 5.0; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Fortinet FortiGate 60F.</td></tr>
+<tr class="alto"><td>CVE-2026-1007</td><td>Fortinet</td><td>FortiGate 60F</td><td>7.4.1</td><td>alta</td><td>publico</td><td>4.03</td><td>CVSS 4.3; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Fortinet FortiGate 60F.</td></tr>
+<tr class="medio"><td>CVE-2026-1008</td><td>Fortinet</td><td>FortiGate 60F</td><td>7.4.1</td><td>alta</td><td>publico</td><td>3.37</td><td>CVSS 3.7; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Fortinet FortiGate 60F.</td></tr></tbody></table></section>
+<section class="asset"><h2>WatchGuard Firebox T35</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-9301</td><td>WatchGuard</td><td>Firebox T35</td><td>12.4.0</td><td>alta</td><td>publico</td><td>10.00</td><td>CVSS 9.1; exposicao 1.1x; criticidade +0.3</td><td>Atualizar firmware do WatchGuard Firebox T35 para versao fora do alcance 12.4.0 - 12.4.2.</td></tr>
+<tr class="critico"><td>CVE-2026-9303</td><td>WatchGuard</td><td>Firebox T35</td><td>12.4.0</td><td>alta</td><td>publico</td><td>8.54</td><td>CVSS 8.4; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do WatchGuard Firebox T35.</td></tr>
+<tr class="critico"><td>CVE-2026-9302</td><td>WatchGuard</td><td>Firebox T35</td><td>12.4.0</td><td>alta</td><td>publico</td><td>7.77</td><td>CVSS 7.7; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do WatchGuard Firebox T35.</td></tr>
+<tr class="alto"><td>CVE-2026-9304</td><td>WatchGuard</td><td>Firebox T35</td><td>12.4.0</td><td>alta</td><td>publico</td><td>5.79</td><td>CVSS 5.9; exposicao 1.1x; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do WatchGuard Firebox T35.</td></tr></tbody></table></section>
+<section class="asset"><h2>Juniper EX3400</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-3001</td><td>Juniper</td><td>EX3400</td><td>12.3.1</td><td>critica</td><td>interno</td><td>9.80</td><td>CVSS 9.3; criticidade +0.5</td><td>Atualizar firmware do Juniper EX3400 para versao fora do alcance 12.3.0 - 12.3.1.</td></tr>
+<tr class="critico"><td>CVE-2026-3003</td><td>Juniper</td><td>EX3400</td><td>12.3.1</td><td>critica</td><td>interno</td><td>8.70</td><td>CVSS 8.2; criticidade +0.5</td><td>Atualizar firmware do Juniper EX3400 para versao fora do alcance 12.3.1.</td></tr>
+<tr class="critico"><td>CVE-2026-3002</td><td>Juniper</td><td>EX3400</td><td>12.3.1</td><td>critica</td><td>interno</td><td>7.20</td><td>CVSS 7.7; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Juniper EX3400.</td></tr>
+<tr class="alto"><td>CVE-2026-3004</td><td>Juniper</td><td>EX3400</td><td>12.3.1</td><td>critica</td><td>interno</td><td>5.60</td><td>CVSS 6.1; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Juniper EX3400.</td></tr>
+<tr class="alto"><td>CVE-2026-3007</td><td>Juniper</td><td>EX3400</td><td>12.3.1</td><td>critica</td><td>interno</td><td>4.90</td><td>CVSS 5.4; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Juniper EX3400.</td></tr>
+<tr class="alto"><td>CVE-2026-3005</td><td>Juniper</td><td>EX3400</td><td>12.3.1</td><td>critica</td><td>interno</td><td>4.50</td><td>CVSS 5.0; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Juniper EX3400.</td></tr>
+<tr class="alto"><td>CVE-2026-3006</td><td>Juniper</td><td>EX3400</td><td>12.3.1</td><td>critica</td><td>interno</td><td>4.20</td><td>CVSS 4.7; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Juniper EX3400.</td></tr>
+<tr class="medio"><td>CVE-2026-3008</td><td>Juniper</td><td>EX3400</td><td>12.3.1</td><td>critica</td><td>interno</td><td>3.90</td><td>CVSS 4.4; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Juniper EX3400.</td></tr>
+<tr class="medio"><td>CVE-2026-3009</td><td>Juniper</td><td>EX3400</td><td>12.3.1</td><td>critica</td><td>interno</td><td>3.00</td><td>CVSS 3.5; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Juniper EX3400.</td></tr></tbody></table></section>
+<section class="asset"><h2>Aruba AP-315</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-4001</td><td>Aruba</td><td>AP-315</td><td>8.7.1</td><td>media</td><td>publico</td><td>9.78</td><td>CVSS 8.8; exposicao 1.1x; criticidade +0.1</td><td>Atualizar firmware do Aruba AP-315 para versao fora do alcance 8.6.0 - 8.7.1.</td></tr>
+<tr class="critico"><td>CVE-2026-4002</td><td>Aruba</td><td>AP-315</td><td>8.7.1</td><td>media</td><td>publico</td><td>7.24</td><td>CVSS 7.4; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Aruba AP-315.</td></tr>
+<tr class="alto"><td>CVE-2026-4003</td><td>Aruba</td><td>AP-315</td><td>8.7.1</td><td>media</td><td>publico</td><td>5.92</td><td>CVSS 6.2; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Aruba AP-315.</td></tr>
+<tr class="alto"><td>CVE-2026-4004</td><td>Aruba</td><td>AP-315</td><td>8.7.1</td><td>media</td><td>publico</td><td>4.93</td><td>CVSS 5.3; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Aruba AP-315.</td></tr>
+<tr class="medio"><td>CVE-2026-4007</td><td>Aruba</td><td>AP-315</td><td>8.7.1</td><td>media</td><td>publico</td><td>3.50</td><td>CVSS 4.0; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Aruba AP-315.</td></tr>
+<tr class="medio"><td>CVE-2026-4005</td><td>Aruba</td><td>AP-315</td><td>8.7.1</td><td>media</td><td>publico</td><td>3.50</td><td>CVSS 4.0; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Aruba AP-315.</td></tr>
+<tr class="medio"><td>CVE-2026-4006</td><td>Aruba</td><td>AP-315</td><td>8.7.1</td><td>media</td><td>publico</td><td>2.73</td><td>CVSS 3.3; exposicao 1.1x; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Aruba AP-315.</td></tr></tbody></table></section>
+<section class="asset"><h2>Cisco Catalyst 2960</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-2003</td><td>Cisco</td><td>Catalyst 2960</td><td>15.2.4</td><td>alta</td><td>interno</td><td>9.30</td><td>CVSS 9.0; criticidade +0.3</td><td>Atualizar firmware do Cisco Catalyst 2960 para versao fora do alcance 15.2.4.</td></tr>
+<tr class="critico"><td>CVE-2026-2001</td><td>Cisco</td><td>Catalyst 2960</td><td>15.2.4</td><td>alta</td><td>interno</td><td>8.10</td><td>CVSS 8.8; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Cisco Catalyst 2960.</td></tr>
+<tr class="critico"><td>CVE-2026-2002</td><td>Cisco</td><td>Catalyst 2960</td><td>15.2.4</td><td>alta</td><td>interno</td><td>8.10</td><td>CVSS 7.8; criticidade +0.3</td><td>Atualizar firmware do Cisco Catalyst 2960 para versao fora do alcance 15.2.0 - 15.2.4.</td></tr>
+<tr class="alto"><td>CVE-2026-2007</td><td>Cisco</td><td>Catalyst 2960</td><td>15.2.4</td><td>alta</td><td>interno</td><td>5.10</td><td>CVSS 5.8; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Cisco Catalyst 2960.</td></tr>
+<tr class="medio"><td>CVE-2026-2005</td><td>Cisco</td><td>Catalyst 2960</td><td>15.2.4</td><td>alta</td><td>interno</td><td>3.60</td><td>CVSS 4.3; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Cisco Catalyst 2960.</td></tr>
+<tr class="medio"><td>CVE-2026-2008</td><td>Cisco</td><td>Catalyst 2960</td><td>15.2.4</td><td>alta</td><td>interno</td><td>3.30</td><td>CVSS 4.0; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Cisco Catalyst 2960.</td></tr>
+<tr class="medio"><td>CVE-2026-2009</td><td>Cisco</td><td>Catalyst 2960</td><td>15.2.4</td><td>alta</td><td>interno</td><td>2.40</td><td>CVSS 3.1; criticidade +0.3; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Cisco Catalyst 2960.</td></tr></tbody></table></section>
+<section class="asset"><h2>Lenovo ThinkSystem SR650</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-9202</td><td>Lenovo</td><td>ThinkSystem SR650</td><td>1.7.4</td><td>media</td><td>interno</td><td>8.90</td><td>CVSS 8.8; criticidade +0.1</td><td>Atualizar firmware do Lenovo ThinkSystem SR650 para versao fora do alcance 1.7.4.</td></tr>
+<tr class="alto"><td>CVE-2026-9201</td><td>Lenovo</td><td>ThinkSystem SR650</td><td>1.7.4</td><td>media</td><td>interno</td><td>6.90</td><td>CVSS 7.8; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Lenovo ThinkSystem SR650.</td></tr>
+<tr class="alto"><td>CVE-2026-9203</td><td>Lenovo</td><td>ThinkSystem SR650</td><td>1.7.4</td><td>media</td><td>interno</td><td>5.30</td><td>CVSS 6.2; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Lenovo ThinkSystem SR650.</td></tr></tbody></table></section>
+<section class="asset"><h2>Dell PowerEdge R750</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-7001</td><td>Dell</td><td>PowerEdge R750</td><td>2.3.1</td><td>critica</td><td>interno</td><td>8.70</td><td>CVSS 8.2; criticidade +0.5</td><td>Atualizar firmware do Dell PowerEdge R750 para versao fora do alcance 2.0.0 - 2.3.1.</td></tr>
+<tr class="alto"><td>CVE-2026-7002</td><td>Dell</td><td>PowerEdge R750</td><td>2.3.1</td><td>critica</td><td>interno</td><td>6.70</td><td>CVSS 7.2; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Dell PowerEdge R750.</td></tr>
+<tr class="alto"><td>CVE-2026-7003</td><td>Dell</td><td>PowerEdge R750</td><td>2.3.1</td><td>critica</td><td>interno</td><td>5.50</td><td>CVSS 6.0; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Dell PowerEdge R750.</td></tr>
+<tr class="alto"><td>CVE-2026-7004</td><td>Dell</td><td>PowerEdge R750</td><td>2.3.1</td><td>critica</td><td>interno</td><td>4.40</td><td>CVSS 4.9; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Dell PowerEdge R750.</td></tr>
+<tr class="medio"><td>CVE-2026-7007</td><td>Dell</td><td>PowerEdge R750</td><td>2.3.1</td><td>critica</td><td>interno</td><td>3.50</td><td>CVSS 4.0; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Dell PowerEdge R750.</td></tr>
+<tr class="medio"><td>CVE-2026-7005</td><td>Dell</td><td>PowerEdge R750</td><td>2.3.1</td><td>critica</td><td>interno</td><td>3.40</td><td>CVSS 3.9; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Dell PowerEdge R750.</td></tr>
+<tr class="medio"><td>CVE-2026-7006</td><td>Dell</td><td>PowerEdge R750</td><td>2.3.1</td><td>critica</td><td>interno</td><td>2.60</td><td>CVSS 3.1; criticidade +0.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Dell PowerEdge R750.</td></tr></tbody></table></section>
+<section class="asset"><h2>Ubiquiti EdgeRouter ER-12</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="critico"><td>CVE-2026-9102</td><td>Ubiquiti</td><td>EdgeRouter ER-12</td><td>2.0.9</td><td>baixa</td><td>interno</td><td>8.10</td><td>CVSS 8.1</td><td>Atualizar firmware do Ubiquiti EdgeRouter ER-12 para versao fora do alcance 2.0.9.</td></tr>
+<tr class="alto"><td>CVE-2026-9101</td><td>Ubiquiti</td><td>EdgeRouter ER-12</td><td>2.0.9</td><td>baixa</td><td>interno</td><td>6.50</td><td>CVSS 7.5; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do Ubiquiti EdgeRouter ER-12.</td></tr></tbody></table></section>
+<section class="asset"><h2>HP Aruba 2930M</h2><table><thead><tr><th>CVE</th><th>Fabricante</th><th>Modelo</th><th>Firmware</th><th>Criticidade</th><th>Exposicao</th><th>Risco</th><th>Justificativa</th><th>Recomendacao</th></tr></thead><tbody><tr class="alto"><td>CVE-2026-9002</td><td>HP</td><td>Aruba 2930M</td><td>16.0.1</td><td>media</td><td>interno</td><td>5.20</td><td>CVSS 6.1; criticidade +0.1; workaround -1.0</td><td>Aplicar workaround publicado e agendar atualizacao de firmware do HP Aruba 2930M.</td></tr></tbody></table></section>
+</main>
+</body>
+</html>

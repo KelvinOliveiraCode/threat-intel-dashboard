@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    # O projeto foi escrito e testado no Windows. Rodar a suite no mesmo SO
+    # evita que um pressuposto de plataforma passe aqui e quebre no Linux.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Conferir encoding dos arquivos de texto
+        # A base de CVEs e o inventario sao ASCII de proposito: sao dados
+        # sinteticos, e um caractere corrompido lido como outro muda o
+        # fabricante, quebra o cruzamento e passa despercebido ate o relatorio
+        # sair errado. Falhar aqui e mais barato.
+        run: python tools/verificar_encoding.py
+
+      - name: Verificar que o pacote importa
+        run: python -c "import intelhub; print(intelhub.__version__)"
+
+      - name: Cruzamento roda e grava o relatorio
+        # Primeira metade do criterio de aceite: 13 equipamentos e 81 CVEs
+        # precisam produzir um HTML, nao um traceback.
+        run: |
+          python -m intelhub cruzar dados/inventario-equipamentos.json dados/cves-ficticias.json --saida exemplos/relatorio-exposicao.html
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "esperava codigo de saida 0, veio $LASTEXITCODE"
+            exit 1
+          }
+
+      - name: Rodar testes com cobertura
+        # fail_under=70 esta no pyproject.toml; cobertura abaixo derruba o build.
+        run: python -m pytest --cov=intelhub --cov-report=term-missing --cov-report=xml
+
+      - name: Conferir cobertura minima
+        run: python -m coverage report --fail-under=70
+
+      - name: Prova de aceite
+        # Sobe as 81 CVEs contra os 13 equipamentos e exige 12 expostos, 1
+        # limpo e o ranking ordenado com justificativa em cada item. O
+        # equipamento limpo e o teste negativo obrigatorio: sem ele, um filtro
+        # que devolvesse tudo passaria.
+        run: python tools/verificar_aceite.py
+
+      - name: Conferir que o exemplo comitado bate com o codigo
+        # Regenera o exemplo e falha se houver diferenca. O relatorio leva uma
+        # data fixa justamente para isso: com a hora da execucao, o git diff
+        # acusaria mudanca em toda build e o gate nao diria nada.
+        #
+        # Note que o comando da CLI NAO e deterministico - ele carimba a hora
+        # de execucao de proposito, porque num relatorio real "gerado em" e
+        # informacao que o leitor precisa. A determinismo vive no gerador, que
+        # fixa a data, e e ele que este passo exercita.
+        run: |
+          python tools/gerar_exemplos.py
+          git diff --exit-code -- exemplos/
+
+      - name: Conferir que o exemplo nao carrega caminho da maquina
+        # O relatorio vai para commit e para issue de ticket. Um caminho
+        # absoluto do Windows ou o home de quem gerou estraga a revisao do diff
+        # e ainda entrega informacao da maquina de desenvolvimento.
+        run: python tools/verificar_exemplo_limpo.py
