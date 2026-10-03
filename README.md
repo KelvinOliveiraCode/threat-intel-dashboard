@@ -33,7 +33,7 @@ positional arguments:
   cves           Caminho do JSON de CVEs.
 
 options:
-  -h, --help     show this help message de saida.
+  -h, --help     show this help message and exit
   --saida SAIDA  Caminho do HTML de saida.
 ```
 
@@ -115,7 +115,7 @@ positional arguments:
   cves           Caminho do JSON de CVEs.
 
 options:
-  -h, --help     show this help message de saida.
+  -h, --help     show this help message and exit
   --saida SAIDA  Caminho do HTML de saida.
 ```
 
