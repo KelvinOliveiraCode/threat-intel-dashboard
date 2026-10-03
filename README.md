@@ -67,7 +67,7 @@ Relatorio gravado em: exemplos\relatorio-exposicao.html
 Para rodar sem instalar nada, aponte o PYTHONPATH para `src`:
 
 ```powershell
-$env:PYTHONPATH="C:\Users\Kelvin\Desktop\portfolio-24\threat-intel-dashboard\src"
+$env:PYTHONPATH="$PWD\src"
 python -m intelhub cruzar dados/inventario-equipamentos.json dados/cves-ficticias.json --saida relatorio.html
 ```
 
@@ -149,7 +149,7 @@ Relatorio gravado em: exemplos\relatorio-exposicao.html
 To run without installing anything, set PYTHONPATH to `src`:
 
 ```powershell
-$env:PYTHONPATH="C:\Users\Kelvin\Desktop\portfolio-24\threat-intel-dashboard\src"
+$env:PYTHONPATH="$PWD\src"
 python -m intelhub cruzar dados/inventario-equipamentos.json dados/cves-ficticias.json --saida relatorio.html
 ```
 
