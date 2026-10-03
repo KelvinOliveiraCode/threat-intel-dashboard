@@ -1,3 +1,15 @@
+<div align="center">
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/tests-189%20passing-brightgreen?style=flat-square" alt="Tests">
+  <img src="https://img.shields.io/badge/coverage-96%25-brightgreen?style=flat-square" alt="Coverage">
+  <img src="https://img.shields.io/badge/license-MIT-yellow?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/platform-Windows-blue?style=flat-square" alt="Windows">
+</p>
+
+</div>
+
 # threat-intel-dashboard
 
 Cruza um inventário local de equipamentos com uma base de vulnerabilidades embarcada e gera um relatório de exposição priorizado por risco em HTML autocontido.
