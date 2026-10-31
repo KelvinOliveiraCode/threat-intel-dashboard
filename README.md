@@ -1,118 +1,101 @@
 # threat-intel-dashboard
 
-<div align="center">
-
 [English](README.en.md) · **Português (Brasil)**
 
-</div>
-
-[![Python 3](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/) [![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn)](https://scikit-learn.org/) [![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas)](https://pandas.pydata.org/) [![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest)](https://docs.pytest.org/) [![MIT License](https://img.shields.io/badge/License-MIT-f4c430?style=flat-square)](LICENSE)
-
-### Curador de inteligencia de ameaca ficticia: versao, faixa afetada e formula de risco
-
----
+[![Python 3](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](#) [![pytest](https://img.shields.io/badge/pytest-189%20testes-0A9EDC?style=flat-square&logo=pytest)](#) [![MIT License](https://img.shields.io/badge/License-MIT-f4c430?style=flat-square)](LICENSE)
 
 ## O que é
 
-Curador de inteligencia de ameaca ficticia: versao, faixa afetada e formula de risco
+**Curador de inteligência de ameaça** (fictícia): cruza um **inventário de equipamentos** com uma base de **CVEs** — cada um com versão afetada e faixa — e gera um **relatório de exposição/risco** em HTML. É um laboratório educacional de threat intelligence em Python puro (stdlib), voltado a versionamento semântico, faixas afetadas e priorização de risco.
 
----
+## Status
 
-## Início Rápido
+Laboratório educacional de segurança, funcional e testado (189 testes).
 
-```bash
-# Clone e entre
-git clone https://github.com/KelvinOliveiraCode/<repo>.git
-cd <repo>
+## Funcionalidades
 
-# Instale dependências
-# Nenhum requirements.txt detectado
+- **Base de CVEs** (`cvedb.py`): carrega CVEs (fictícias), normaliza versões e verifica `versao_no_alcance` (range de versão afetada).
+- **Inventário** (`inventario.py`): lista de equipamentos com versões.
+- **Cruzamento** (`cruzamento.py`): exposição por equipamento × CVE, com comparação de versões.
+- **Priorização** (`priorizacao.py`): fórmula de risco para ordenar exposições.
+- **Relatório HTML** (`relatorio.py`): saída legível do cruzamento.
+- **CLI**: `cruzar <inventario> <cves> --saida <html>`.
+- **CWE/CVSS**: docstring e dados ficam fictícios (dados em `dados/`).
 
-# Execute o projeto
-python main.py
+## Arquitetura
 
-# Execute os testes
-pytest
+Pacote `intelhub` com módulos separados: `cvedb` (base de CVEs), `inventario`, `cruzamento` (exposição), `priorizacao` (risco) e `relatorio` (HTML), orquestrados pelo CLI.
+
+```mermaid
+flowchart LR
+    INV[inventario JSON] --> CRUZ[cruzamento]
+    CVE[cves JSON] --> CRUZ
+    CRUZ --> PRIO[priorizacao - risco]
+    PRIO --> REL[relatorio - HTML]
+    CLI[cli cruzar] --> CRUZ
 ```
 
-## Como funciona
+## Stack
 
-Estrutura limpa e modular com separação de responsabilidades.
+- Python ≥ 3.10, stdlib apenas
+- pytest (dev)
 
----
+## Estrutura do repositório
 
-## Capacidades
+```
+threat-intel-dashboard/
+├── pyproject.toml · BRIEF.md
+├── src/intelhub/
+│   ├── cvedb.py · inventario.py · cruzamento.py
+│   ├── priorizacao.py · relatorio.py · cli.py
+├── dados/
+│   ├── cves-ficticias.json
+│   └── inventario-equipamentos.json
+├── tests/             # 189 testes
+└── LICENSE            # MIT
+```
 
-| Capacidade | Descrição |
-|------------|-------------|
-| Carregamento de Dados | Auto-download do TensorFlow creditcard.csv (284k transações) com cache local |
-| EDA e Visualização | Distribuição de classes, histogramas de Amount, heatmaps de correlação (matplotlib/seaborn) |
-| Pré-processamento | RobustScaler em Amount/Time, split estratificado, remoção de duplicatas |
-| Balanceamento | SMOTE oversampling (fallback: class_weight="balanced") |
-| Modelagem | LogisticRegression, RandomForest, ExtraTrees com RandomizedSearchCV (StratifiedKFold) |
-| Métricas | Accuracy, Precision, Recall, F1, ROC AUC, Specificity, Confusion Matrix |
-| Seleção | Score ponderado: Recall 40% + F1 30% + Precision 20% + Accuracy 10% |
-| Persistência | Serialização joblib para modelo, scaler e resultados completos |
+## Pré-requisitos e instalação
 
+Python ≥ 3.10.
 
----
+```bash
+pip install -e .
+```
 
+## Como executar
 
+```bash
+intelhub cruzar dados/inventario-equipamentos.json dados/cves-ficticias.json --saida relatorio.html
+# ou: python -m intelhub cruzar ...
+```
 
----
+## Testes e qualidade
 
-## Perguntas Frequentes
+Comando real (verificado pelo agente):
 
-<details>
-<summary><strong>O que é este projeto?</strong></summary>
+```bash
+PYTHONPATH=src python -m pytest tests/
+# 189 passed
+```
 
-Um estudo/projeto em Python demonstrando conceitos fundamentais.
+## Decisões técnicas e trade-offs
 
-</details>
+- **Versionamento semântico próprio** (`_comparar`, `versao_no_alcance`): independente de libs, transparência no cálculo; o custo é reimplementar o que uma lib de semver faria.
+- **Dados fictícios**: seguro e reprodutível; não é intel real.
+- **Sem dependências (stdlib)**: leve e auditável.
 
-<details>
-<summary><strong>Como executar?</strong></summary>
+## Limitações conhecidas e roadmap
 
-Veja [Início Rápido](#início-rápido) para comandos copiáveis.
+- CVEs e inventário são fictícios — não usar para decisões reais de segurança.
+- O relatório cobre exposição por versão; não inclui exploitabilidade externa detalhada.
 
-</details>
+## Processo de desenvolvimento
 
-<details>
-<summary><strong>Há testes?</strong></summary>
+Projeto individual de Kelvin Oliveira, construído com agentes de IA orquestrados e revisado pelo autor. O cruzamento, a priorização e a revisão são do autor.
 
-Nenhum teste automatizado neste repositório.
+## Licença e autor
 
-</details>
+MIT — Copyright (c) 2026 Kelvin Rebelo de Oliveira.
 
-<details>
-<summary><strong>Posso usar em produção?</strong></summary>
-
-Este é um **projeto de estudo/portfólio**. Revise e endureça (auth, persistência, monitoramento, etc.) antes de usar em produção.
-
-</details>
-
-
-
----
-
-## Documentação
-
-- **Código-Fonte** ,  Navegue pelo diretório `src/` para detalhes de implementação
-- **Referência da API** ,  Docstrings inline + type hints
-- **Diagrama de Arquitetura** ,  Veja [architecture.mermaid](docs/architecture.mermaid) (se presente)
-- **Changelog** ,  [CHANGELOG.md](CHANGELOG.md) (se presente)
-- **Contribuindo** ,  [CONTRIBUTING.md](CONTRIBUTING.md) (se presente)
-
-## Licença
-
-[MIT](LICENSE) ,  Kelvin Oliveira
-
----
-
-<div align="center">
-
-**Construído com** · Python 3 + scikit-learn + pandas
-
-**Autor** · [Kelvin Oliveira](https://github.com/KelvinOliveiraCode) · [Portfolio](https://kelvinoliveiracode.github.io/portfolio/)
-
-</div>
+**Autor**: [Kelvin Oliveira](https://github.com/KelvinOliveiraCode) · [Portfólio](https://kelvinoliveiracode.github.io/portfolio/)
